@@ -20,6 +20,7 @@ jobs:
       - name: Test Flake8
         run: |
           pwd
+          ls
           source venv/bin/activate
           pip install flake8
           flake8 ci-cd-review/main.py
