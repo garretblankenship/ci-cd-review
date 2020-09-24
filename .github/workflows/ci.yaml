@@ -1,0 +1,10 @@
+name: Pipeline
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  Coding-Convention:
+    runs-on: ubuntu-latest
+    
