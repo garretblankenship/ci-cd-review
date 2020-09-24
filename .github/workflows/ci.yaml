@@ -17,9 +17,10 @@ jobs:
           git clone https://github.com/garretblankenship/ci-cd-review.git
           cd ci-cd-review
           python3.8 -m venv venv
-          source venv/bin/activate
       - name: Test Flake8
         run: |
+          pwd
+          source venv/bin/activate
           pip install flake8
           flake8 ci-cd-review/main.py
         
