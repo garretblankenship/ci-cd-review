@@ -22,5 +22,5 @@ jobs:
           cd ci-cd-review
           source venv/bin/activate
           pip install flake8
-          flake8 ci-cd-review/main.py
+          flake8 main.py
         
