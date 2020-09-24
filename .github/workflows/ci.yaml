@@ -15,9 +15,11 @@ jobs:
       - name: Clone repo & setup venv
         run: |
           git clone https://github.com/garretblankenship/ci-cd-review.git
-          python3.8 -m venv ci-cd-review/venv
+          cd ci-cd-review
+          python3.8 -m venv venv
+          source venv/bin/activate
       - name: Test Flake8
         run: |
-          ci-cd-review/venv/bin/pip3.8 install flake8
-          ci-cd-review/venv/bin/flake8 ci-cd-review/main.py
+          pip install flake8
+          flake8 ci-cd-review/main.py
         
